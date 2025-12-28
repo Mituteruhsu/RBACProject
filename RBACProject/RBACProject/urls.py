@@ -20,4 +20,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('RBACProjectPages.urls')),
+
+    path('admin/', include('accounts.urls.admin')),
+    path('user/', include('accounts.urls.user')),
+    path('logs/', include('logs.urls')),
 ]
