@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'logs.middleware.ActivityLogMiddleware',
 ]
 
 ROOT_URLCONF = 'RBACProject.urls'
@@ -101,6 +102,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Create RETENTION_DAYS for ActivityLog
+ACTIVITY_LOG_RETENTION_DAYS = 90
+ACTIVITY_LOG_ASYNC = False  # 沒 Celery 就設 False
 
 
 # Internationalization
