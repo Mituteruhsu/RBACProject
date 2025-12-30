@@ -20,13 +20,13 @@
 ## 🧭 專案資訊 (Project Information)
 | 分類 | 說明 |
 |------|------|
-| **專案名稱** | CarbonProject |
-| **開發框架** | ASP.NET Core MVC |
-| **資料庫** | SQL Server / Azure SQL |
+| **專案名稱** | Django RBACProject|
+| **開發框架** | Python Django |
+| **資料庫** | SQL Server / PythonAnywher |
 | **主要功能** | 帳戶管理、碳排追蹤、目標設定、活動紀錄 |
 | **開發者** | 徐秉群 (Allen Hsu) |
 | **版本** | v2.0.0 |
-| 線上 Demo | [carbornprojectwebpractice.somee.com](https://carbornprojectwebpractice.somee.com/) |
+| 線上 Demo | [https://jinnsun2024.pythonanywhere.com/](https://jinnsun2024.pythonanywhere.com/) |
 
 ---
 
