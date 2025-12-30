@@ -1,0 +1,13 @@
+{% extends "pages/base.html" %}
+
+{% block content %}
+<div class="error-page">
+  <h1>403 - 權限不足</h1>
+  <p>你已登入，但沒有權限存取此頁面。</p>
+
+  <div class="actions">
+    <a href="{% url 'dashboard' %}">回儀表板</a>
+    <a href="{% url 'home' %}">回首頁</a>
+  </div>
+</div>
+{% endblock %}
