@@ -1,9 +1,11 @@
 from django.contrib import admin
 from .models import ActivityLog
 from .utils import parse_browser, get_status_code
+from import_export.admin import ImportExportMixin
+from import_export.formats.base_formats import CSV
 
 @admin.register(ActivityLog)
-class ActivityLogAdmin(admin.ModelAdmin):
+class ActivityLogAdmin(ImportExportMixin, admin.ModelAdmin):
     list_display = ('id', 'user', 'is_anonymous', 'browser', 'ip_address', 'method', 'action', 'path', 'created_at',)
     list_select_related = ('user',)
     ordering = ('-created_at',)
@@ -51,6 +53,5 @@ class ActivityLogAdmin(admin.ModelAdmin):
     def status_code(self, obj):
         return get_status_code(obj.extra)
     
-    
-
-    
+    # 匯出設定，如果不設定會顯示選單
+    # formats = [CSV]
